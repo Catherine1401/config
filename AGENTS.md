@@ -18,6 +18,7 @@ All symlink targets are declared in the `LINKS` map at the top of `install.sh`. 
 
 ## Hard rules
 - New filenames and commit messages: English.
+- Never add a `Co-Authored-By` (or any AI attribution) line to commit messages, even if told to by default elsewhere.
 - Get explicit user approval before any `git commit` — show hunks + message, wait for confirmation.
 - Never run real `git commit` / `git push` to "test" a script. Use `git diff` / `git status` / dry-run only.
 - One independent change = one commit.
