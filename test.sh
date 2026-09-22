@@ -19,7 +19,7 @@ check_bash_syntax() { bash -n "$1"; }
 
 check_tmux_conf() {
   local sock="dotfiles-test-$$"
-  tmux -f "$1" -L "$sock" new-session -d "true" 2>/dev/null
+  tmux -L "$sock" -f /dev/null start-server \; source-file "$1"
   local ok=$?
   tmux -L "$sock" kill-server 2>/dev/null
   return $ok
