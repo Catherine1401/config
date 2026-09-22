@@ -2,6 +2,12 @@
 
 Dotfiles sync repo (zsh, tmux, kitty). nvim lives in a separate repo, cloned by `install.sh`.
 
+## Current context
+- `main` is synchronized with `origin/main` at `d0433c7` (`fix(zsh): guard missing cargo environment`).
+- `uninstall.sh` restores backed-up config, removes only installer-owned dependencies, and deletes the clone after cleanup; use `--yes` to skip confirmation.
+- The real uninstall → fresh clone → install cycle has passed. `./test.sh` passes all checks.
+- Runtime ownership data lives in ignored `.install-state/`; pre-existing dependencies are preserved during uninstall.
+
 ## Scope map
 - `install.sh` — bootstrap new machine: symlink `LINKS` map into `$HOME`; clone nvim repo, TPM, and oh-my-zsh custom plugins/theme via `clone_if_missing` if missing; run TPM `install_plugins`; set `core.hooksPath`.
 - `sync.sh push [msg]` / `sync.sh pull` — sync this repo AND `~/.config/nvim` (if present) together.
