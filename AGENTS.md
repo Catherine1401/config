@@ -3,7 +3,7 @@
 Dotfiles sync repo (zsh, tmux, kitty). nvim lives in a separate repo, cloned by `install.sh`.
 
 ## Scope map
-- `install.sh` — bootstrap new machine: symlink `LINKS` map into `$HOME`, clone nvim repo if missing, set `core.hooksPath`.
+- `install.sh` — bootstrap new machine: symlink `LINKS` map into `$HOME`; clone nvim repo, TPM, and oh-my-zsh custom plugins/theme via `clone_if_missing` if missing; run TPM `install_plugins`; set `core.hooksPath`.
 - `sync.sh push [msg]` / `sync.sh pull` — sync this repo AND `~/.config/nvim` (if present) together.
 - `test.sh` — validates zsh/tmux/kitty config syntax + script syntax. Auto-runs via `.githooks/pre-push`; run manually after any edit.
 - `.docs/` — human docs, gitignored, never commit.
@@ -13,7 +13,8 @@ All symlink targets are declared in the `LINKS` map at the top of `install.sh`. 
 
 ## Boundary rules
 - nvim = independent git repo (`nvim.git`). Never merge its content into this repo.
-- Never track oh-my-zsh core or third-party plugins/themes (zsh-autosuggestions, powerlevel10k, etc.) — that's installation, not config. Only `.zshrc` / `.zshenv` / `.p10k.zsh` are tracked.
+- Never track oh-my-zsh core, TPM, or third-party plugin/theme code in git — that's installation, not config. Only `.zshrc` / `.zshenv` / `.p10k.zsh` / `.tmux.conf` are tracked; plugin/theme source repos are pinned by URL in `install.sh` (`ZSH_CUSTOM_PLUGINS`, `ZSH_THEME_REPO`, `TPM_REPO`) and auto-cloned from upstream, same model as nvim.
+- `install.sh` never installs oh-my-zsh core itself — only clones custom plugins/theme, and only if `~/.oh-my-zsh` already exists.
 
 ## Hard rules
 - New filenames and commit messages: English.
