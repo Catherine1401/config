@@ -12,6 +12,14 @@ git clone git@github.com:Catherine1401/config.git ~/config && ~/config/install.s
 
 That's it. It symlinks the config into place, clones the nvim repo, installs tmux plugins (TPM) and the oh-my-zsh custom plugins/theme, and sets up a pre-push check — all idempotent, safe to re-run anytime.
 
+## Uninstall
+
+```
+~/config/uninstall.sh
+```
+
+This restores every config file backed up during installation, removes only dependencies and directories created by the installer, then deletes the dotfiles repo itself. Existing files and dependencies that the installer did not create are left untouched. Use `--yes` to skip the confirmation prompt.
+
 ## What's inside
 
 - **zsh** — `.zshrc`, `.zshenv`, `.p10k.zsh` (powerlevel10k)

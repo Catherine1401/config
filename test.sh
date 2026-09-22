@@ -40,6 +40,7 @@ check "zsh: .p10k.zsh"        check_zsh_syntax  "$DOTFILES_DIR/zsh/.p10k.zsh"
 check "tmux: .tmux.conf"      check_tmux_conf   "$DOTFILES_DIR/tmux/.tmux.conf"
 check "kitty: includes resolve" check_kitty_includes "$DOTFILES_DIR/kitty/kitty.conf"
 check "install.sh syntax"     check_bash_syntax "$DOTFILES_DIR/install.sh"
+check "uninstall.sh syntax"   check_bash_syntax "$DOTFILES_DIR/uninstall.sh"
 check "sync.sh syntax"        check_bash_syntax "$DOTFILES_DIR/sync.sh"
 
 exit $FAILED
