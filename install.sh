@@ -39,3 +39,6 @@ if [ ! -e "$NVIM_TARGET" ]; then
 else
   echo "skip nvim: $NVIM_TARGET already exists"
 fi
+
+git -C "$DOTFILES_DIR" config core.hooksPath "$DOTFILES_DIR/.githooks"
+echo "hooks: core.hooksPath -> $DOTFILES_DIR/.githooks"
