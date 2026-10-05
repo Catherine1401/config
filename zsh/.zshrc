@@ -195,6 +195,8 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-
 
 # Tăng tốc build Gradle: bật parallel + file-system watching (project đang tắt sẵn).
 export GRADLE_OPTS="-Dorg.gradle.parallel=true -Dorg.gradle.vfs.watch=true"
+export PATH="$HOME/.bun/bin:$PATH"
+
 # Nạp key/token local nếu file tồn tại (file nằm ngoài repo).
 SECRETS_FILE="$HOME/.config/zsh/secrets.zsh"
 [[ -r "$SECRETS_FILE" ]] && source "$SECRETS_FILE"
