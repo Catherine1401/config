@@ -193,6 +193,8 @@ alias devctlupdate='(cd $HOME/lib_bin/shared && git checkout dev && git pull ori
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
 
+# Tăng tốc build Gradle: bật parallel + file-system watching (project đang tắt sẵn).
+export GRADLE_OPTS="-Dorg.gradle.parallel=true -Dorg.gradle.vfs.watch=true"
 # Nạp key/token local nếu file tồn tại (file nằm ngoài repo).
 SECRETS_FILE="$HOME/.config/zsh/secrets.zsh"
 [[ -r "$SECRETS_FILE" ]] && source "$SECRETS_FILE"
