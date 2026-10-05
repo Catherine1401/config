@@ -192,3 +192,7 @@ export PATH="$HOME/lib_bin/shared/scripts:$PATH"
 alias devctlupdate='(cd $HOME/lib_bin/shared && git checkout dev && git pull origin dev) && source ~/.zshrc && echo "[devctl] updated: $(devctl version | head -1)"'
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
+
+# Nạp key/token local nếu file tồn tại (file nằm ngoài repo).
+SECRETS_FILE="$HOME/.config/zsh/secrets.zsh"
+[[ -r "$SECRETS_FILE" ]] && source "$SECRETS_FILE"

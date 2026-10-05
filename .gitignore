@@ -1,2 +1,3 @@
 .docs/
 .install-state/
+zsh/secrets.zsh
