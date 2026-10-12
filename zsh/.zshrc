@@ -200,3 +200,6 @@ export PATH="$HOME/.bun/bin:$PATH"
 # Nạp key/token local nếu file tồn tại (file nằm ngoài repo).
 SECRETS_FILE="$HOME/.config/zsh/secrets.zsh"
 [[ -r "$SECRETS_FILE" ]] && source "$SECRETS_FILE"
+
+export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:$HOME/.pub-cache/bin"
