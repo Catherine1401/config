@@ -32,6 +32,10 @@ declare -A LINKS=(
   ["$DOTFILES_DIR/kitty/kitty.conf"]="$HOME/.config/kitty/kitty.conf"
   ["$DOTFILES_DIR/kitty/current-theme.conf"]="$HOME/.config/kitty/current-theme.conf"
   ["$DOTFILES_DIR/kitty/dark-theme.auto.conf"]="$HOME/.config/kitty/dark-theme.auto.conf"
+  ["$DOTFILES_DIR/yazi/keymap.toml"]="$HOME/.config/yazi/keymap.toml"
+  ["$DOTFILES_DIR/yazi/plugins/clipboard.yazi/main.lua"]="$HOME/.config/yazi/plugins/clipboard.yazi/main.lua"
+  ["$DOTFILES_DIR/yazi/plugins/clipboard.yazi/README.md"]="$HOME/.config/yazi/plugins/clipboard.yazi/README.md"
+  ["$DOTFILES_DIR/yazi/plugins/clipboard.yazi/LICENSE"]="$HOME/.config/yazi/plugins/clipboard.yazi/LICENSE"
 )
 
 path_exists() {

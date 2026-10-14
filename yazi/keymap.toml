@@ -1,0 +1,16 @@
+# Copy file đã yank vào clipboard hệ thống để dán sang app khác (Telegram...)
+[[mgr.prepend_keymap]]
+on   = "y"
+run  = [ "yank", "plugin clipboard -- --action=copy" ]
+desc = "Yank selected files (copy)"
+
+[[mgr.prepend_keymap]]
+on   = "x"
+run  = [ "yank --cut", "plugin clipboard -- --action=copy" ]
+desc = "Yank selected files (cut)"
+
+# Dán file từ clipboard hệ thống vào thư mục hiện tại
+[[mgr.prepend_keymap]]
+on   = "<C-p>"
+run  = [ "plugin clipboard -- --action=paste" ]
+desc = "Paste yanked system clipboard files"
