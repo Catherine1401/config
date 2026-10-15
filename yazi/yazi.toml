@@ -1,0 +1,10 @@
+# Thêm Chrome vào menu O cho file html; Enter vẫn mở bằng $EDITOR
+[opener]
+browser = [
+	{ run = "google-chrome %s1", desc = "Chrome", for = "linux", orphan = true },
+]
+
+[open]
+prepend_rules = [
+	{ mime = "text/html", use = [ "edit", "browser", "reveal" ] },
+]
