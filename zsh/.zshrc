@@ -89,11 +89,17 @@ plugins=(
   web-search
   zsh-autosuggestions
   zsh-syntax-highlighting
-  docker
-  docker-compose
   zsh-completions
   flutter
 )
+
+if [[ -x "${commands[docker]:-}" ]]; then
+  plugins+=(docker)
+fi
+
+if [[ -x "${commands[docker-compose]:-}" ]] || { [[ -x "${commands[docker]:-}" ]] && docker compose version >/dev/null 2>&1; }; then
+  plugins+=(docker-compose)
+fi
 
 source $ZSH/oh-my-zsh.sh
 
