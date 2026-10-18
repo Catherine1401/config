@@ -25,6 +25,13 @@ ZSH_THEME_REPO="https://github.com/romkatv/powerlevel10k.git"
 ZSH_THEME_NAME="powerlevel10k"
 
 declare -A LINKS=(
+  ["$DOTFILES_DIR/hypr/hyprland.lua"]="$HOME/.config/hypr/hyprland.lua"
+  ["$DOTFILES_DIR/hypr/noctalia.lua"]="$HOME/.config/hypr/noctalia.lua"
+  ["$DOTFILES_DIR/hypr/.luarc.json"]="$HOME/.config/hypr/.luarc.json"
+  ["$DOTFILES_DIR/noctalia/settings.json"]="$HOME/.config/noctalia/settings.json"
+  ["$DOTFILES_DIR/noctalia/colors.json"]="$HOME/.config/noctalia/colors.json"
+  ["$DOTFILES_DIR/noctalia/plugins.json"]="$HOME/.config/noctalia/plugins.json"
+  ["$DOTFILES_DIR/noctalia/shot.toml"]="$HOME/.config/noctalia/shot.toml"
   ["$DOTFILES_DIR/zsh/.zshrc"]="$HOME/.zshrc"
   ["$DOTFILES_DIR/zsh/.zshenv"]="$HOME/.zshenv"
   ["$DOTFILES_DIR/zsh/.p10k.zsh"]="$HOME/.p10k.zsh"

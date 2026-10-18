@@ -1,0 +1,11 @@
+{
+  "workspace": {
+    "library": [
+      "/usr/share/hypr/stubs"
+    ],
+    "checkThirdParty": false
+  },
+  "runtime": {
+    "version": "Lua 5.4"
+  }
+}

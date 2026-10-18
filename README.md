@@ -1,6 +1,6 @@
 # huyvv's dotfiles
 
-My zsh, tmux, and kitty config, synced across every machine I use. Neovim config lives in its own repo: [nvim](https://github.com/Catherine1401/nvim).
+My zsh, tmux, kitty, Hyprland, and Noctalia config, synced across every machine I use. Neovim config lives in its own repo: [nvim](https://github.com/Catherine1401/nvim).
 
 Use it, fork it, rip out what doesn't fit you. It's tuned for how I work, not a framework.
 
@@ -25,7 +25,11 @@ This restores every config file backed up during installation, removes only depe
 - **zsh** — `.zshrc`, `.zshenv`, `.p10k.zsh` (powerlevel10k)
 - **tmux** — `.tmux.conf`, plugins installed automatically via TPM
 - **kitty** — `kitty.conf` + theme files
+- **Hyprland** — Lua configuration, Noctalia theme module, and Lua language server settings
+- **Noctalia** — settings, colors, plugin sources, and screenshot preferences
 - **nvim** — separate repo, cloned automatically, kept independent so its history stays clean
+
+Hyprland and Noctalia must already be installed. The imported configuration preserves its existing fonts, `/home/hw` paths, monitor settings, and GPU references. GPU device symlinks, local backups, and wallpapers are not included; provision these machine-specific dependencies separately before using the configuration on another machine.
 
 Everything is symlinked from this repo into `$HOME`, declared centrally in the `LINKS` map at the top of `install.sh`. No GNU Stow, no magic — just plain bash.
 
