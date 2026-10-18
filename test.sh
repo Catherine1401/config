@@ -42,5 +42,6 @@ check "kitty: includes resolve" check_kitty_includes "$DOTFILES_DIR/kitty/kitty.
 check "install.sh syntax"     check_bash_syntax "$DOTFILES_DIR/install.sh"
 check "uninstall.sh syntax"   check_bash_syntax "$DOTFILES_DIR/uninstall.sh"
 check "sync.sh syntax"        check_bash_syntax "$DOTFILES_DIR/sync.sh"
+check "toggle-touchpad.sh syntax" check_bash_syntax "$DOTFILES_DIR/bin/toggle-touchpad.sh"
 
 exit $FAILED

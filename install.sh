@@ -25,6 +25,7 @@ ZSH_THEME_REPO="https://github.com/romkatv/powerlevel10k.git"
 ZSH_THEME_NAME="powerlevel10k"
 
 declare -A LINKS=(
+  ["$DOTFILES_DIR/bin/toggle-touchpad.sh"]="$HOME/.local/bin/toggle-touchpad.sh"
   ["$DOTFILES_DIR/hypr/hyprland.lua"]="$HOME/.config/hypr/hyprland.lua"
   ["$DOTFILES_DIR/hypr/noctalia.lua"]="$HOME/.config/hypr/noctalia.lua"
   ["$DOTFILES_DIR/hypr/.luarc.json"]="$HOME/.config/hypr/.luarc.json"

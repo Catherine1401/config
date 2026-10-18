@@ -31,6 +31,8 @@ This restores every config file backed up during installation, removes only depe
 
 Hyprland and Noctalia must already be installed. The imported configuration preserves its existing fonts, `/home/hw` paths, monitor settings, and GPU references. GPU device symlinks, local backups, and wallpapers are not included; provision these machine-specific dependencies separately before using the configuration on another machine.
 
+`bin/toggle-touchpad.sh` is linked to `~/.local/bin/toggle-touchpad.sh` for the existing Hyprland shortcuts. It requires Python 3, `hyprctl`, `notify-send`, and `XDG_RUNTIME_DIR`. It toggles all mice whose names contain `touchpad` (case-insensitive), leaving other mice untouched, and reports an error if none match. Its state marker is scoped to the Hyprland session; reloading device settings can reset the actual state independently of this marker.
+
 Everything is symlinked from this repo into `$HOME`, declared centrally in the `LINKS` map at the top of `install.sh`. No GNU Stow, no magic — just plain bash.
 
 Every push runs `test.sh` first (via a git hook), which checks config syntax before it ever reaches another machine. Broken config never propagates.
