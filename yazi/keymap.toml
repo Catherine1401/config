@@ -14,3 +14,9 @@ desc = "Yank selected files (cut)"
 on   = "<C-p>"
 run  = [ "plugin clipboard -- --action=paste" ]
 desc = "Paste yanked system clipboard files"
+
+# Giải nén file đang trỏ vào thư mục tự gõ sau -o (7zz tự tạo thư mục nếu chưa có)
+[[mgr.prepend_keymap]]
+on   = "E"
+run  = 'shell --block --interactive "7zz x -y %h -o"'
+desc = "Extract to directory"
