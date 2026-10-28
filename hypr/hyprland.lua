@@ -281,8 +281,10 @@ hl.config({
 
 hl.config({
 	input = {
-		kb_layout = "us",
-		kb_variant = "",
+		-- Two layouts per keyboard: US and US (Colemak-DH).
+		-- Toggle them with SUPER + K (~/.local/bin/switch-keyboard-layout.sh).
+		kb_layout = "us,us",
+		kb_variant = ",colemak_dh",
 		kb_model = "",
 		kb_options = "",
 		kb_rules = "",
@@ -326,6 +328,7 @@ hl.bind("ALT + print", hl.dsp.exec_cmd(ipc .. " screenshot-fullscreen all"))
 hl.bind(mainMod .. "+W", hl.dsp.exec_cmd(ipc .. " panel-toggle control-center calendar"))
 hl.bind(mainMod .. "+L", hl.dsp.exec_cmd(ipc .. " session lock"))
 hl.bind(mainMod .. "+F3", hl.dsp.exec_cmd("~/.local/bin/toggle-touchpad.sh"))
+hl.bind(mainMod .. "+K", hl.dsp.exec_cmd("~/.local/bin/switch-keyboard-layout.sh"))
 hl.bind("CTRL + SUPER + code:202", hl.dsp.exec_cmd("~/.local/bin/toggle-touchpad.sh"))
 hl.bind(mainMod .. "+N", hl.dsp.exec_cmd(ipc .. " panel-toggle control-center notifications"))
 hl.bind(mainMod .. "+period", hl.dsp.exec_cmd("smile"))

@@ -43,5 +43,6 @@ check "install.sh syntax"     check_bash_syntax "$DOTFILES_DIR/install.sh"
 check "uninstall.sh syntax"   check_bash_syntax "$DOTFILES_DIR/uninstall.sh"
 check "sync.sh syntax"        check_bash_syntax "$DOTFILES_DIR/sync.sh"
 check "toggle-touchpad.sh syntax" check_bash_syntax "$DOTFILES_DIR/bin/toggle-touchpad.sh"
+check "switch-keyboard-layout.sh syntax" check_bash_syntax "$DOTFILES_DIR/bin/switch-keyboard-layout.sh"
 
 exit $FAILED
