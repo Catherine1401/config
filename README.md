@@ -25,13 +25,15 @@ This restores every config file backed up during installation, removes only depe
 - **zsh** — `.zshrc`, `.zshenv`, `.p10k.zsh` (powerlevel10k)
 - **tmux** — `.tmux.conf`, plugins installed automatically via TPM
 - **kitty** — `kitty.conf` + theme files
-- **Hyprland** — Lua configuration, Noctalia theme module, and Lua language server settings
+- **Hyprland** — Lua configuration with US/Colemak-DH layout switching, Noctalia theme module, and Lua language server settings
 - **Noctalia** — settings, colors, plugin sources, and screenshot preferences
 - **nvim** — separate repo, cloned automatically, kept independent so its history stays clean
 
 Hyprland and Noctalia must already be installed. The imported configuration preserves its existing fonts, `/home/hw` paths, monitor settings, and GPU references. GPU device symlinks, local backups, and wallpapers are not included; provision these machine-specific dependencies separately before using the configuration on another machine.
 
 `bin/toggle-touchpad.sh` is linked to `~/.local/bin/toggle-touchpad.sh` for the existing Hyprland shortcuts. It requires Python 3, `hyprctl`, `notify-send`, and `XDG_RUNTIME_DIR`. It toggles all mice whose names contain `touchpad` (case-insensitive), leaving other mice untouched, and reports an error if none match. Its state marker is scoped to the Hyprland session; reloading device settings can reset the actual state independently of this marker.
+
+`bin/switch-keyboard-layout.sh` is linked to `~/.local/bin/switch-keyboard-layout.sh` and bound to `SUPER + K`. It cycles every Hyprland keyboard between US and US (Colemak-DH) and shows the active keymap in a notification. It requires `hyprctl`, Python 3, and `notify-send`.
 
 Everything is symlinked from this repo into `$HOME`, declared centrally in the `LINKS` map at the top of `install.sh`. No GNU Stow, no magic — just plain bash.
 

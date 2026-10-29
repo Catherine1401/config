@@ -209,3 +209,12 @@ SECRETS_FILE="$HOME/.config/zsh/secrets.zsh"
 
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:$HOME/.pub-cache/bin"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
