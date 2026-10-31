@@ -46,6 +46,9 @@ declare -A LINKS=(
   ["$DOTFILES_DIR/yazi/plugins/clipboard.yazi/main.lua"]="$HOME/.config/yazi/plugins/clipboard.yazi/main.lua"
   ["$DOTFILES_DIR/yazi/plugins/clipboard.yazi/README.md"]="$HOME/.config/yazi/plugins/clipboard.yazi/README.md"
   ["$DOTFILES_DIR/yazi/plugins/clipboard.yazi/LICENSE"]="$HOME/.config/yazi/plugins/clipboard.yazi/LICENSE"
+  ["$DOTFILES_DIR/yazi/plugins/office.yazi/main.lua"]="$HOME/.config/yazi/plugins/office.yazi/main.lua"
+  ["$DOTFILES_DIR/yazi/plugins/office.yazi/README.md"]="$HOME/.config/yazi/plugins/office.yazi/README.md"
+  ["$DOTFILES_DIR/yazi/plugins/office.yazi/LICENSE"]="$HOME/.config/yazi/plugins/office.yazi/LICENSE"
 )
 
 path_exists() {
