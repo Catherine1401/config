@@ -289,6 +289,11 @@ hl.config({
 		kb_options = "",
 		kb_rules = "",
 
+		-- Resolve keybinds by the symbol of the active layout instead of by
+		-- keycode, so SUPER + <letter> follows Colemak-DH instead of QWERTY.
+		-- Example: SUPER + E opens the file manager on the key that types "e".
+		resolve_binds_by_sym = true,
+
 		follow_mouse = 1,
 
 		sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
