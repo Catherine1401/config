@@ -35,6 +35,8 @@ Hyprland and Noctalia must already be installed. The imported configuration pres
 
 `bin/switch-keyboard-layout.sh` is linked to `~/.local/bin/switch-keyboard-layout.sh` and bound to `SUPER + K`. It cycles every Hyprland keyboard between US and US (Colemak-DH) and shows the active keymap in a notification. It requires `hyprctl`, Python 3, and `notify-send`.
 
+Hyprland resolves `SUPER + <letter>` binds by the active layout symbol (`input:resolve_binds_by_sym`), so with Colemak-DH active `SUPER + E` means the key that types `e` rather than the key in the QWERTY E position. `SUPER + K` follows the same rule, so it sits on the key that types `k` in each layout.
+
 Everything is symlinked from this repo into `$HOME`, declared centrally in the `LINKS` map at the top of `install.sh`. No GNU Stow, no magic — just plain bash.
 
 Every push runs `test.sh` first (via a git hook), which checks config syntax before it ever reaches another machine. Broken config never propagates.
