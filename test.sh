@@ -25,20 +25,23 @@ check_tmux_conf() {
   return $ok
 }
 
-check_kitty_includes() {
-  local conf="$1" dir target
-  dir="$(dirname "$conf")"
-  while IFS= read -r target; do
-    [ -f "$dir/$target" ] || return 1
-  done < <(grep -E '^include ' "$conf" | awk '{print $2}')
-  return 0
+check_ghostty_config() {
+  local conf="$1"
+  command -v ghostty >/dev/null 2>&1 || return 0
+  ghostty +validate-config --config-file="$conf" >/dev/null 2>&1
+}
+
+check_fish_syntax() {
+  command -v fish >/dev/null 2>&1 || return 0
+  fish --no-execute "$1"
 }
 
 check "zsh: .zshrc"           check_zsh_syntax  "$DOTFILES_DIR/zsh/.zshrc"
 check "zsh: .zshenv"          check_zsh_syntax  "$DOTFILES_DIR/zsh/.zshenv"
 check "zsh: .p10k.zsh"        check_zsh_syntax  "$DOTFILES_DIR/zsh/.p10k.zsh"
+check "fish: config.fish"     check_fish_syntax "$DOTFILES_DIR/fish/config.fish"
 check "tmux: .tmux.conf"      check_tmux_conf   "$DOTFILES_DIR/tmux/.tmux.conf"
-check "kitty: includes resolve" check_kitty_includes "$DOTFILES_DIR/kitty/kitty.conf"
+check "ghostty: config validates" check_ghostty_config "$DOTFILES_DIR/ghostty/config"
 check "install.sh syntax"     check_bash_syntax "$DOTFILES_DIR/install.sh"
 check "uninstall.sh syntax"   check_bash_syntax "$DOTFILES_DIR/uninstall.sh"
 check "sync.sh syntax"        check_bash_syntax "$DOTFILES_DIR/sync.sh"

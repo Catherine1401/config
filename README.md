@@ -1,6 +1,6 @@
 # huyvv's dotfiles
 
-My zsh, tmux, kitty, Hyprland, and Noctalia config, synced across every machine I use. Neovim config lives in its own repo: [nvim](https://github.com/Catherine1401/nvim).
+My zsh, fish, tmux, ghostty, Hyprland, and Noctalia config, synced across every machine I use. Neovim config lives in its own repo: [nvim](https://github.com/Catherine1401/nvim).
 
 Use it, fork it, rip out what doesn't fit you. It's tuned for how I work, not a framework.
 
@@ -23,8 +23,9 @@ This restores every config file backed up during installation, removes only depe
 ## What's inside
 
 - **zsh** — `.zshrc`, `.zshenv`, `.p10k.zsh` (powerlevel10k)
+- **fish** — `config.fish` (PATH/env parity with zsh, yazi `y` wrapper)
 - **tmux** — `.tmux.conf`, plugins installed automatically via TPM
-- **kitty** — `kitty.conf` + theme files
+- **ghostty** — `config` (theme, font, window behavior)
 - **Hyprland** — Lua configuration with US/Colemak-DH layout switching, Noctalia theme module, and Lua language server settings
 - **Noctalia** — settings, colors, plugin sources, and screenshot preferences
 - **nvim** — separate repo, cloned automatically, kept independent so its history stays clean

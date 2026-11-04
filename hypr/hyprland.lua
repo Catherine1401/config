@@ -97,7 +97,7 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal = "kitty"
+local terminal = "ghostty"
 local fileManager = "nautilus"
 local menu = "hyprlauncher"
 
