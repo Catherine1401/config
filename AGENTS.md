@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Dotfiles sync repo (zsh, tmux, kitty). nvim lives in a separate repo, cloned by `install.sh`.
+Dotfiles sync repo (zsh, fish, tmux, ghostty). nvim lives in a separate repo, cloned by `install.sh`.
 
 ## Current context
 - `main` is synchronized with `origin/main` at `d0433c7` (`fix(zsh): guard missing cargo environment`).
@@ -11,7 +11,7 @@ Dotfiles sync repo (zsh, tmux, kitty). nvim lives in a separate repo, cloned by 
 ## Scope map
 - `install.sh` — bootstrap new machine: symlink `LINKS` map into `$HOME`; clone nvim repo, TPM, and oh-my-zsh custom plugins/theme via `clone_if_missing` if missing; run TPM `install_plugins`; set `core.hooksPath`.
 - `sync.sh push [msg]` / `sync.sh pull` — sync this repo AND `~/.config/nvim` (if present) together.
-- `test.sh` — validates zsh/tmux/kitty config syntax + script syntax. Auto-runs via `.githooks/pre-push`; run manually after any edit.
+- `test.sh` — validates zsh/fish/tmux/ghostty config syntax + script syntax. Auto-runs via `.githooks/pre-push`; run manually after any edit.
 - `yazi/` — yazi `keymap.toml` plus the vendored `clipboard.yazi` plugin (deliberate exception to the third-party rule below); symlinked via `LINKS`.
 - `.docs/` — human docs, gitignored, never commit.
 
